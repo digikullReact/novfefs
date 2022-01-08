@@ -16,6 +16,13 @@ function Counter() {
 
 
     }
+
+
+    const decrement=function(){
+
+        setState(state-1)
+
+    }
     return (
         <div>
 
@@ -26,6 +33,10 @@ function Counter() {
                 Increment
             </button>
             
+
+            <button onClick={decrement}>
+                Decrement
+            </button>
         </div>
     )
 }
