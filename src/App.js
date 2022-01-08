@@ -1,13 +1,15 @@
-import './App.css';
-import Home from './Home';
+import React from 'react'
+import Counter from './components/Counter';
+import Home from './components/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <Home/>
-    
-    </div>
-  );
+const App = () => {
+    return (
+        <div>
+            <Counter/>
+            
+          {/**<Home/> */}  
+        </div>
+    )
 }
 
 export default App;
