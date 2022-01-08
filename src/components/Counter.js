@@ -1,12 +1,14 @@
 import React ,{useState} from 'react'
 
 function Counter() {
-      const [state,setState]=   useState(1)
+      let [state,setState]=   useState(1)
 
 
     const increment=function(){
 
-        setState(state+1)
+     //state=state+1
+
+      setState(state+1)  //   --> state=state+1  --->a re render of component happens
         // i have to do somethings
 
        // const currentValue=document.getElementById("heading").innerText;
@@ -20,7 +22,9 @@ function Counter() {
 
     const decrement=function(){
 
-        setState(state-1)
+        console.log(state);
+
+      //  setState(state-1)
 
     }
     return (
