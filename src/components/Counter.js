@@ -1,14 +1,24 @@
 import React ,{useState} from 'react'
 
-function Counter() {
+
+/// ---> create an app to convert string to lowercase to upper case to binary to asciii value
+
+// --->props -->re rendering 
+
+//   Friends -->  friends  --->FRIENDS  --->
+function Counter(props) {
+
+     console.log(props);
+    // props.propFunction();
       let [state,setState]=   useState(1)
 
 
     const increment=function(){
+      props.incrementNum();
 
      //state=state+1
 
-      setState(state+1)  //   --> state=state+1  --->a re render of component happens
+      //setState(state+1)  //   --> state=state+1  --->a re render of component happens
         // i have to do somethings
 
        // const currentValue=document.getElementById("heading").innerText;
@@ -29,18 +39,20 @@ function Counter() {
     }
     return (
         <div>
-
-          {/**  <h1 id="heading">1</h1>*/} 
-          <h1 >{state}</h1>
-
             <button onClick={increment}>
-                Increment
+                Increment From Child
             </button>
+
+          {/**  <h1 id="heading">1</h1>
+        
+
+          
             
 
             <button onClick={decrement}>
                 Decrement
             </button>
+            */} 
         </div>
     )
 }
